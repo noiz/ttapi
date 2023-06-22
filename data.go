@@ -6,6 +6,7 @@ type SpeakEvt struct {
 	UserID  string
 	Name    string
 	Text    string
+	Mid     string
 }
 
 // RegisteredEvt ...

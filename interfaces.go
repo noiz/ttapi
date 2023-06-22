@@ -29,6 +29,7 @@ type IBot interface {
 	BootUser(userID, reason string) error
 	Bop() error
 	DirectoryGraph() (DirectoryGraphRes, error)
+	Emoji(emoji, mid string) error
 	GetAvatarIDs() ([]int, error)
 	GetFavorites() (GetFavoritesRes, error)
 	GetFanOf(userID string) (GetFanOfRes, error)

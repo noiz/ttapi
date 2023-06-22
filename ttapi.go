@@ -556,6 +556,10 @@ func (b *Bot) search(query string) (out SearchRes, err error) {
 	return out, baseErr(out.BaseRes)
 }
 
+func (b *Bot) emoji(emoji, mid string) error {
+	return txBaseErr(b, H{"api": roomEmoji, "roomid": b.roomID, "emoji": emoji, "mid": mid})
+}
+
 func (b *Bot) speak(msg string) error {
 	return txBaseErr(b, H{"api": roomSpeak, "roomid": b.roomID, "text": msg})
 }
@@ -954,6 +958,11 @@ func (b *Bot) RoomRegister(roomID string) error {
 // Search for a song
 func (b *Bot) Search(query string) (SearchRes, error) {
 	return b.search(query)
+}
+
+// Add emoji reaction
+func (b *Bot) Emoji(emoji, mid string) error {
+	return b.emoji(emoji, mid)
 }
 
 // Speak send a message in the public chat

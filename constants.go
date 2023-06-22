@@ -47,6 +47,7 @@ const (
 	roomRemModerator     = "room.rem_moderator"
 	roomBootUser         = "room.boot_user"
 	roomDeregister       = "room.deregister"
+	roomEmoji            = "room.emoji"
 	roomInfo             = "room.info"
 	roomRegister         = "room.register"
 	roomRemDj            = "room.rem_dj"
